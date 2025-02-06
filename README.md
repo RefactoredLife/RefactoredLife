@@ -1,7 +1,8 @@
 ![Header](./github-header-image.png)
 
+## 🚀 Technology Enthusiast | Solutions Architect | Automation Expert
 
-Innovative and results-driven Solutions Architect with extensive experience in API development, enterprise integration, AI-powered automation, and cloud solutions. Passionate about building scalable, high-performance IT solutions through simplistic yet powerful engineering and design principles. Adept at transforming legacy systems, driving digital transformation, and leading cross-functional teams to deliver impactful technology solutions.
+💡 Passionate about API transformation, AI-driven automation, and cloud solutions. I specialize in designing scalable architectures, building intelligent automation systems, and driving digital transformation initiatives.
 
 
 ### 🤝 Connect with me:
@@ -10,13 +11,11 @@ Innovative and results-driven Solutions Architect with extensive experience in A
 </br>
 - 💬 If you have any question/feedback, please do not hesitate to reach out to me!
 
-## 🔭 I'm currently working on
+## 📌 Recent Work:
 
-- My old projects
-- Restaurant Recommendation App (React-Native)
-- Mobile + Desktop Spotify Clone (Working on it soon...)
-- My next blog
-- My CSS skill
+Led an API transformation to enhance partner and customer integrations
+Built an AI-powered self-healing system to reduce incident mitigation time
+Developed automation services to enhance security and operational efficiency
 
 ## 🌱 I'm currently learning
 
