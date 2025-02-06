@@ -1,8 +1,8 @@
 ![Header](./github-header-image.png)
 
-<h2 align="left">
+
 Innovative and results-driven Solutions Architect with extensive experience in API development, enterprise integration, AI-powered automation, and cloud solutions. Passionate about building scalable, high-performance IT solutions through simplistic yet powerful engineering and design principles. Adept at transforming legacy systems, driving digital transformation, and leading cross-functional teams to deliver impactful technology solutions.
-</h2> 
+
 
 ### 🤝 Connect with me:
 
