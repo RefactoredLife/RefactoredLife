@@ -1,6 +1,6 @@
 ![Header](./github-header-image.png)
 
-<h2 align="center">
+<h2 align="left">
 Innovative and results-driven Solutions Architect with extensive experience in API development, enterprise integration, AI-powered automation, and cloud solutions. Passionate about building scalable, high-performance IT solutions through simplistic yet powerful engineering and design principles. Adept at transforming legacy systems, driving digital transformation, and leading cross-functional teams to deliver impactful technology solutions.
 </h2> 
 
@@ -24,36 +24,15 @@ Innovative and results-driven Solutions Architect with extensive experience in A
 
 ## 💼 Technical Skills
 
-![](https://img.shields.io/badge/Code-React-informational?style=flat&logo=react&color=61DAFB)
-![](https://img.shields.io/badge/Code-Redux-informational?style=flat&logo=Redux&color=764ABC)
-![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=JavaScript&color=F7DF1E)
-![](https://img.shields.io/badge/Code-Ruby-informational?style=flat&logo=Ruby&color=CC342D)
-![](https://img.shields.io/badge/Code-Ruby_on_Rails-informational?style=flat&logo=Ruby-On-Rails&color=CC0000)
-![](https://img.shields.io/badge/Code-HTML5-informational?style=flat&logo=HTML5&color=E34F26)
-![](https://img.shields.io/badge/Code-PostgreSQL-informational?style=flat&logo=PostgreSQL&color=336791)
-![](https://img.shields.io/badge/Code-SQLite-informational?style=flat&logo=SQLite&color=003B57)
+### Languages
+![](https://go-skill-icons.vercel.app/api/icons?i=javascript,c,java,python,bash,powershell,groovy)
 
-</br>
-
-![](https://img.shields.io/badge/Style-Bootstrap-informational?style=flat&logo=Bootstrap&color=7952B3)
-![](https://img.shields.io/badge/Style-CSS3-informational?style=flat&logo=CSS3&color=1572B6)
-![](https://img.shields.io/badge/Style-styled--components-informational?style=flat&logo=styled-components&color=DB7093)
-
-
-</br>
-
-![](https://img.shields.io/badge/Tools-Figma-informational?style=flat&logo=Figma&color=F24E1E)
-![](https://img.shields.io/badge/Tools-NPM-informational?style=flat&logo=NPM&color=CB3837)
-![](https://img.shields.io/badge/Tools-Heroku-informational?style=flat&logo=Heroku&color=430098)
-![](https://img.shields.io/badge/Tools-Netlify-informational?style=flat&logo=netlify&color=00C7B7)
-![](https://img.shields.io/badge/Tools-Git-informational?style=flat&logo=Git&color=F05032)
-![](https://img.shields.io/badge/Tools-GitHub-informational?style=flat&logo=GitHub&color=181717)
+### Technologies and Tools
+![](https://go-skill-icons.vercel.app/api/icons?i=azure,grafana,kibana,kafka,cassandra,maven,jenkins,jira,dbeaver,mongodb,mysql,hibernate,alchemy,andible,terraform,azuredevops,api,nginx,nodejs,ollama,oracle,pandas,numpy,jupyter,flask,kubernetes,docker,helm,git,linux,insomnia,powershell,visualstudio,vim)
 
 
 ## 📈 GitHub Stats 
 
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=yushi1007)](https://github.com/yushi1007)
+[![Sami's github stats](https://github-readme-stats.vercel.app/api?username=refactoredlife)](https://github.com/refactoredlife)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=yushi1007&layout=compact)](https://github.com/yushi1007)
-
-[![Visitors](https://visitor-badge.glitch.me/badge?page_id=yushi1007.yushi1007)](https://www.yushi.dev/)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=refactoredlife&layout=compact)](https://github.com/refactoredlife)
