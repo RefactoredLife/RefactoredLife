@@ -1,11 +1,7 @@
 ![Header](./github-header-image.png)
 
-<h3 align="center">
-Hi there, I'm <a href="https://www.yushi.dev/" target="_blank" rel="noreferrer">Sami</a> 👋
-</h3>
-
 <h2 align="center">
-I'm a Full-Stack Web Developer 💻, Photographer 📸, and Designer 🎨!
+Innovative and results-driven Principal Developer with extensive experience in API development, enterprise integration, AI-powered automation, and cloud solutions. Passionate about building scalable, high-performance IT solutions through simplistic yet powerful engineering and design principles. Adept at transforming legacy systems, driving digital transformation, and leading cross-functional teams to deliver impactful technology solutions.
 </h2> 
 
 I love the entire process of developing creative websites. I love the challenge of finding caches and spending time to meet new people. Learning how people hide things and where people are likely to look.
