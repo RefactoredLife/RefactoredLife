@@ -1,4 +1,4 @@
-![Header](./your-header-image-name.png)
+![Header](./github-header-image.png)
 
 <h3 align="center">
 Hi there, I'm <a href="https://www.yushi.dev/" target="_blank" rel="noreferrer">Sami</a> 👋
