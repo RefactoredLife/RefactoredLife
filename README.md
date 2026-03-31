@@ -20,4 +20,4 @@ I build data-intensive products at the intersection of AI, analytics, and financ
 
 **Tech:** Python, Streamlit, Plotly, Pandas, SciPy, MariaDB, MongoDB, Google APIs, Docker
 
-[View Repository](https://github.com/your-username/visualize)
+[View Repository](https://github.com/RefactoredLife/visualize)
