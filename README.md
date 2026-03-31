@@ -17,9 +17,9 @@ Led an API transformation to enhance partner and customer integrations
 Built an AI-powered self-healing system to reduce incident mitigation time
 Developed automation services to enhance security and operational efficiency
 
-## 🌱 I'm currently learning
+## 🌱 I'm currently building
 
-- 📱 LLMs
+- 📱 Currently building a lightweight internal secrets cache for containerized workloads, using Bitwarden/Vaultwarden as the source of truth and Docker networking for access control. The project explores fast secret retrieval, secure deployment patterns, and practical tradeoffs around caching, service isolation, and secret injection in real infrastructure workflows with Terraform and Ansible.
 
 ## 💼 Technical Skills
 
