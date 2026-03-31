@@ -2,7 +2,7 @@
 
 ## 🚀 Technology Enthusiast | Solutions Architect | Automation Expert
 
-💡 Passionate about API transformation, AI-driven automation, and cloud solutions. I specialize in designing scalable architectures, building intelligent automation systems, and driving digital transformation initiatives.
+💡 Passionate about GenAI, financial analytics, and intelligent decision systems. Able to take AI/ML solutions from concept to production, delivering measurable business value through LLM-driven workflows, data pipelines, and financial modeling systems.
 
 
 ### 🤝 Connect with me:
@@ -13,9 +13,7 @@
 
 ## 📌 Recent Work:
 
-Led an API transformation to enhance partner and customer integrations
-Built an AI-powered self-healing system to reduce incident mitigation time
-Developed automation services to enhance security and operational efficiency
+A personal finance intelligence platform focused on portfolio analytics, financial forecasting, expense intelligence, and interactive decision support. It combines statement ingestion, portfolio analytics, expense intelligence, forecasting, and interactive dashboards into a single Streamlit application backed by APIs, databases, and observability tooling. The goal is to turn messy financial data into decision-grade software.
 
 ## 🌱 I'm currently building
 
