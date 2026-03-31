@@ -6,6 +6,8 @@ I build data-intensive products at the intersection of AI, analytics, and financ
 
 **Visualize** is a financial intelligence platform for transforming raw portfolio, transaction, and statement data into decision-ready analytics.
 
+![Visualize dashboard](https://horani.net/monte_carlo.jpg)
+
 ### What it does
 - Portfolio analytics across accounts with return, drawdown, volatility, Sharpe ratio, and benchmark tracking
 - Tax-aware workflows with capital gains analysis and lot selection support
