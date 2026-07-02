@@ -119,6 +119,70 @@ This is a small-scale production platform: automated provisioning, isolated work
 - Modular internal platform design where the Finance API, visualization app, media stack, secrets service, proxy automation, and database services share reusable infrastructure patterns.
 - Operator-level debugging discipline using system, storage, container, network, Grafana, and log diagnostics to validate and troubleshoot the platform.
 
+## Proxmox Homelab Infrastructure
+
+Infrastructure-as-code for a Proxmox-based homelab. The platform provisions VMs and LXC containers with Terraform, configures hosts and services with Ansible, and wraps common operations in Make targets.
+
+### What It Manages
+
+- Proxmox VMs and LXC containers for app, database, proxy, media, DNS, secrets, and supporting infrastructure.
+- WireGuard VPN, Pi-hole DNS/DHCP, Nginx Proxy Manager, Vaultwarden, and Cloudflare/DDNS automation.
+- Plex, OpenCloud, media host preparation, proxy automation, and web deployment workflows.
+- Proxmox host tasks including GPU preparation and encrypted backup disk automounting.
+- Proxmox Backup Server encrypted backup disk setup.
+
+### IaC Repository Shape
+
+```text
+ansible/              production inventory, host/group vars, and service playbooks
+install/              Proxmox installer and first-boot helpers
+scripts/              backup, keyring, template, and utility scripts
+terraform/            Proxmox resources and cloud-init templates
+vars/                 Make variable definitions by domain
+.github/workflows/    infrastructure CI/CD workflows
+makefile              local automation entry point
+```
+
+### Common Automation Surface
+
+```bash
+make tf-init
+make tf-plan
+make tf-apply
+make wireguard
+make pihole
+make vaultwarden
+make secrets
+make proxy-config
+make web
+make ddns
+```
+
+### Idempotency and Safety
+
+Most day-to-day targets are designed to converge the environment toward desired state. Terraform manages resource lifecycle, while Ansible service targets rerun safely for configuration drift, rebuilds, and recovery work.
+
+- `make tf-plan` is read-only.
+- `make tf-apply` converges Terraform-managed resources.
+- Service targets such as `wireguard`, `vaultwarden`, `secrets`, `proxy-config`, `web`, and `ddns` run Ansible playbooks intended to be rerunnable.
+- App and media targets such as `app-data`, `app-loki-plugin`, `app-inject-secrets`, `media-hw-attach`, `media-guest-prep`, `media-plex`, and `media-opencloud` support operational configuration.
+- `recreate-*` targets are intentionally destructive and are treated as rebuild operations, not routine configuration.
+
+### GitHub Actions
+
+Infrastructure CI/CD validates changes before they touch the homelab.
+
+- Pull requests run Terraform formatting, Terraform validation, and Ansible syntax checks.
+- Pushes to `main` run validation and Terraform planning on a self-hosted Linux runner.
+- Manual dispatch supports Terraform plan/apply plus service workflows for WireGuard, Pi-hole, Vaultwarden, secrets, proxy configuration, web deployment, and DDNS.
+- Self-hosted runners are used where private Proxmox API and Ansible targets are required.
+
+### WireGuard and Secrets Workflows
+
+WireGuard provisioning is automated through Ansible playbooks and helper scripts that generate client keys, add peers idempotently, write client configs, and only restart the service when a peer is changed.
+
+Vaultwarden-to-keyring helpers sync selected vault items into the local Python keyring. Sync operations reconcile renamed or deleted items, avoid exporting secrets into shell sessions, and provide Python helpers for applications that need password retrieval.
+
 ## ETL and Data Platform Strengths
 
 The finance pipeline is built for messy real-world financial data, not clean demo CSVs. It ingests brokerage statements, credit-card activity, PDFs, and multi-institution records, then normalizes them into financial domain objects that APIs and visualizations can use.
