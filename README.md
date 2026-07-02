@@ -8,20 +8,15 @@ I focus on backend leverage: clean API contracts, normalized data models, produc
 
 A full-stack investment analytics system designed around secure APIs, normalized financial data, portfolio performance services, Monte Carlo simulation, and a native iOS client.
 
-I built an idempotent homelab platform and finance data system with automated infrastructure, centralized secrets, observability, resilient backups, and a modular ETL pipeline that normalizes messy financial statements into API-ready analytics.
+I built an idempotent private cloud platform and finance data system with automated infrastructure, centralized secrets, observability, resilient backups, and a modular ETL pipeline that normalizes messy financial statements into API-ready analytics.
 
 [View the project site](https://horani.net/projects/)
 
-### Visual Highlights
+### iOS Product Screens
 
 <p>
-  <img src="https://horani.net/projects/grafana-api-overview-mobile.png" width="260" alt="Grafana dashboard showing Finance API request rate, latency, errors, and logs">
   <img src="https://horani.net/projects/IMG_3034.jpeg" width="260" alt="iOS retirement planning screen with Monte Carlo simulation and retirement balances">
   <img src="https://horani.net/projects/IMG_3037.jpeg" width="260" alt="iOS portfolio analytics screen showing market value and realized gain loss">
-</p>
-
-<p>
-  <img src="https://horani.net/projects/grafana-log-context-mobile.png" width="260" alt="Grafana structured log context view for the finance-api service">
   <img src="https://horani.net/projects/IMG_3035.jpeg" width="260" alt="iOS tax dashboard showing taxable investment income and dividends">
   <img src="https://horani.net/projects/IMG_3036.jpeg" width="260" alt="iOS tax optimization screen showing taxable accounts and lot strategy comparison">
 </p>
@@ -48,6 +43,8 @@ I built an idempotent homelab platform and finance data system with automated in
 ## Architecture
 
 The platform separates ingestion, normalization, analytics, and presentation layers so each capability can evolve independently. The iOS app is intentionally thin: the backend owns financial logic, analytics, data quality, and API contracts.
+
+[View the full Finance Platform architecture diagram](https://projects.horani.net/architecture.jpg)
 
 ```text
 Brokerage Statements
@@ -96,6 +93,12 @@ The backend is instrumented with OpenTelemetry-style service metadata, Prometheu
 - Performance visibility: P95 latency, throughput, slow-route analysis, and active database connection tracking.
 - Structured troubleshooting: searchable live logs with service labels, Docker metadata, request paths, HTTP status, and timestamped context.
 
+<p>
+  <img src="https://projects.horani.net/grafana-live-logs-mobile.png" width="260" alt="Grafana live logs dashboard showing recent service log events and log volume">
+  <img src="https://projects.horani.net/grafana-service-health-mobile.png" width="260" alt="Grafana service health dashboard showing success rate, database connections, errors, and throughput">
+  <img src="https://camo.githubusercontent.com/b9960372dc2fc3692ed738e3693f80abaaa5a16bef34bc38c81797a554961984/68747470733a2f2f686f72616e692e6e65742f70726f6a656374732f67726166616e612d6c6f672d636f6e746578742d6d6f62696c652e706e67" width="260" alt="Grafana structured log context view for the finance-api service">
+</p>
+
 ## Infrastructure Engineering
 
 The platform is backed by repeatable provisioning, service configuration, deployment automation, and operational workflows.
@@ -119,25 +122,25 @@ This is a small-scale production platform: automated provisioning, isolated work
 - Modular internal platform design where the Finance API, visualization app, media stack, secrets service, proxy automation, and database services share reusable infrastructure patterns.
 - Operator-level debugging discipline using system, storage, container, network, Grafana, and log diagnostics to validate and troubleshoot the platform.
 
-## Proxmox Homelab Infrastructure
+## Private Cloud Infrastructure Platform
 
-Infrastructure-as-code for a Proxmox-based homelab. The platform provisions VMs and LXC containers with Terraform, configures hosts and services with Ansible, and wraps common operations in Make targets.
+Infrastructure-as-code for a virtualized private cloud environment. The platform provisions VMs and containers with Terraform, configures hosts and services with Ansible, and wraps common operations in Make targets.
 
 ### What It Manages
 
-- Proxmox VMs and LXC containers for app, database, proxy, media, DNS, secrets, and supporting infrastructure.
+- VMs and containers for app, database, proxy, media, DNS, secrets, and supporting infrastructure.
 - WireGuard VPN, Pi-hole DNS/DHCP, Nginx Proxy Manager, Vaultwarden, and Cloudflare/DDNS automation.
 - Plex, OpenCloud, media host preparation, proxy automation, and web deployment workflows.
-- Proxmox host tasks including GPU preparation and encrypted backup disk automounting.
-- Proxmox Backup Server encrypted backup disk setup.
+- Virtualization host tasks including GPU preparation and encrypted backup disk automounting.
+- Backup server encrypted disk setup and recovery-oriented storage workflows.
 
 ### IaC Repository Shape
 
 ```text
 ansible/              production inventory, host/group vars, and service playbooks
-install/              Proxmox installer and first-boot helpers
+install/              platform installer and first-boot helpers
 scripts/              backup, keyring, template, and utility scripts
-terraform/            Proxmox resources and cloud-init templates
+terraform/            virtual infrastructure resources and cloud-init templates
 vars/                 Make variable definitions by domain
 .github/workflows/    infrastructure CI/CD workflows
 makefile              local automation entry point
@@ -170,12 +173,12 @@ Most day-to-day targets are designed to converge the environment toward desired 
 
 ### GitHub Actions
 
-Infrastructure CI/CD validates changes before they touch the homelab.
+Infrastructure CI/CD validates changes before they touch the private infrastructure environment.
 
 - Pull requests run Terraform formatting, Terraform validation, and Ansible syntax checks.
 - Pushes to `main` run validation and Terraform planning on a self-hosted Linux runner.
 - Manual dispatch supports Terraform plan/apply plus service workflows for WireGuard, Pi-hole, Vaultwarden, secrets, proxy configuration, web deployment, and DDNS.
-- Self-hosted runners are used where private Proxmox API and Ansible targets are required.
+- Self-hosted runners are used where private infrastructure APIs and Ansible targets are required.
 
 ### WireGuard and Secrets Workflows
 
