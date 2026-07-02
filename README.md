@@ -8,6 +8,8 @@ I focus on backend leverage: clean API contracts, normalized data models, produc
 
 A full-stack investment analytics system designed around secure APIs, normalized financial data, portfolio performance services, Monte Carlo simulation, and a native iOS client.
 
+I built an idempotent homelab platform and finance data system with automated infrastructure, centralized secrets, observability, resilient backups, and a modular ETL pipeline that normalizes messy financial statements into API-ready analytics.
+
 [View the project site](https://horani.net/projects/)
 
 ### Visual Highlights
@@ -102,6 +104,31 @@ The platform is backed by repeatable provisioning, service configuration, deploy
 - Ansible inventories, variables, and service playbooks for WireGuard, Pi-hole, Vaultwarden, reverse proxy routing, web deployment, and DDNS.
 - GitHub Actions workflows for Terraform formatting and validation, Ansible syntax checks, infrastructure plans, and manual service dispatches.
 - Vaultwarden-backed helpers that sync selected credentials into the local Python keyring while keeping machine-specific values out of Git.
+
+## Architecture Strengths
+
+This is a small-scale production platform: automated provisioning, isolated workloads, centralized ingress, DNS, secrets, observability, storage, and backup/recovery. The strength of the architecture is that it is real infrastructure, not a toy demo.
+
+- Clear separation of concerns across application, database, media, proxy, DNS, backup, and secrets services, reducing blast radius and creating clean ownership boundaries.
+- Automation-first delivery with Terraform, Ansible, Docker Compose, Make, and GitHub Actions so environments are reproducible instead of manually assembled.
+- Idempotent desired-state operations: playbooks and automation can be rerun to create users, mount storage, install services, configure Nginx Proxy Manager, deploy containers, apply DNS/cert settings, and recover after rebuilds without manually remembering steps.
+- Production-style networking with reverse proxy routing, Cloudflare DNS, Pi-hole/Unbound, TLS automation, internal hostnames, and controlled service exposure.
+- Practical secrets management with Vaultwarden-backed workflows, local secret caching, and Ansible/Make integration instead of hardcoded credentials.
+- Observability maturity through Prometheus, Loki, Tempo, OpenTelemetry Collector, Grafana dashboards, and FastAPI instrumentation.
+- Data durability and recovery planning with PBS, encrypted backup storage, restic history, LVM thin pool checks, and backup troubleshooting workflows.
+- Modular internal platform design where the Finance API, visualization app, media stack, secrets service, proxy automation, and database services share reusable infrastructure patterns.
+- Operator-level debugging discipline using system, storage, container, network, Grafana, and log diagnostics to validate and troubleshoot the platform.
+
+## ETL and Data Platform Strengths
+
+The finance pipeline is built for messy real-world financial data, not clean demo CSVs. It ingests brokerage statements, credit-card activity, PDFs, and multi-institution records, then normalizes them into financial domain objects that APIs and visualizations can use.
+
+- Modular ingestion by source and statement section, including Fidelity, credit cards, activity, holdings, options, and statement-specific sections.
+- Clear pipeline shape: ingestion -> processing -> storage -> API -> visualization.
+- Normalization layer that converts raw statements into structured holdings, activity, transactions, categories, summaries, and API-ready data.
+- Extensible parser design so new statement formats or financial institutions can be added without rewriting the whole pipeline.
+- Financial domain modeling across accounts, holdings, performance summaries, periods, portfolios, categories, tax views, cash views, and credit views.
+- Analytics-ready outputs that support portfolio performance, tax intelligence, retirement planning, simulations, and spending analysis.
 
 ## iOS Product Capabilities
 
