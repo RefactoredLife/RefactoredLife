@@ -10,6 +10,20 @@ A full-stack investment analytics system designed around secure APIs, normalized
 
 [View the project site](https://horani.net/projects/)
 
+### Visual Highlights
+
+<p>
+  <img src="https://horani.net/projects/grafana-api-overview-mobile.png" width="260" alt="Grafana dashboard showing Finance API request rate, latency, errors, and logs">
+  <img src="https://horani.net/projects/IMG_3034.jpeg" width="260" alt="iOS retirement planning screen with Monte Carlo simulation and retirement balances">
+  <img src="https://horani.net/projects/IMG_3037.jpeg" width="260" alt="iOS portfolio analytics screen showing market value and realized gain loss">
+</p>
+
+<p>
+  <img src="https://horani.net/projects/grafana-log-context-mobile.png" width="260" alt="Grafana structured log context view for the finance-api service">
+  <img src="https://horani.net/projects/IMG_3035.jpeg" width="260" alt="iOS tax dashboard showing taxable investment income and dividends">
+  <img src="https://horani.net/projects/IMG_3036.jpeg" width="260" alt="iOS tax optimization screen showing taxable accounts and lot strategy comparison">
+</p>
+
 ### Platform Scope
 
 - Python / FastAPI backend services
